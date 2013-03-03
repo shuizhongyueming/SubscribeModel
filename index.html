@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>订阅者模式-案例</title>
+    <style type="text/css">
+#demo{width: 1000px;height: 350px;border: 1px solid #333;background: #ccc;margin: 0 auto;}
+.J-box{display: inline;float: left;width:200px;height: auto;border: 1px solid #393939;margin: 10px;}
+.J-box .J-box-header{height: 40px;line-height: 40px;background: #3f3f3f;text-align: center;color: white;}
+.J-box .J-box-cont{padding: 5px;min-height: 150px;border-top: 1px solid #393939;}
+.J-box .J-box-cont h1{font-size: 14px;}
+    </style>
+</head>
+<body>
+<p>Clicker: 被点击的时候发布消息</p>
+<p>Changer: 每次改变背景的时候发布消息</p>
+<p>Hider: 会在隐藏或显示的时候发布消息</p>
+
+<div id="demo">
+</div>
+
+
+<script type="text/javascript" src="boxer.js"></script>
+<script type="text/javascript" src="clicker.js"></script>
+<script type="text/javascript" src="changer.js"></script>
+<script type="text/javascript" src="hider.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

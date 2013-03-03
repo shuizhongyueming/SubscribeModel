@@ -20,14 +20,17 @@ function main(){
         Clicker.changeCont('Hider 讨厌绿色 隐身了');
     });
 
-    // Changer广播red Clicker显示文本 Hider必然显示
+    // Changer广播red Hider必然显示
     Changer.subscribe('red',function(){
-        Clicker.changeCont('Changer脸红的时候真好看');
         if(!Hider.visibleStatus) Hider.showBox();
     });
 
     // Clicker广播click Changer 切换背景固定与改变两种状态
     Clicker.subscribe('click',function(){Changer.toggle();});
+
+    document.getElementById('stop').addEventListener('click',function(){
+        Clicker.unSubscribe('click',toggleHider);
+    },false);
 };
 
 document.getElementsByTagName('body')[0].onload = main;

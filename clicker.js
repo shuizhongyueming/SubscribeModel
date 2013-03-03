@@ -53,15 +53,15 @@ var Clicker = {
      * @return {[number]}        [0->成功 1->even格式错误 2->func格式错误 3->要取消的动作不存在]
      */
     unSubscribe: function(even,func){
-        var m = this;
+        var m = this,o,i,len;
 
         // 参数检测
         if(typeof even !== 'string') return 1;
         if(typeof func !== 'function')  return 2;     
 
-        o = e[even];
+        o = m[even];
         if(o){
-            for(i,len=o.length;i<len;i++){
+            for(i=0,len=o.length;i<len;i++){
                 if(o[i] == func)   o.splice(i,1);
             }
         }else{
@@ -83,7 +83,6 @@ var Clicker = {
         o = m[even];
         if(o){
             for(i,len=o.length;i<len;i++){
-                console.log(o[i])
                 o[i](even);
             }
         }

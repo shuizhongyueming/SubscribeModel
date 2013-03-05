@@ -42,7 +42,7 @@ Changer.changeBg = function(color){
     var m = this;
 
     m.box.style.backgroundColor = color;
-    m.fire(color);
+    m.publish(color);
 
     return m;
 

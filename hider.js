@@ -22,7 +22,7 @@ Hider.hideBox = function(){
 
     m.box.style.opacity = '0';
     m.visibleStatus = false;
-    m.fire('hide');
+    m.publish('hide');
     return m;
 };
 
@@ -35,7 +35,7 @@ Hider.showBox = function(){
 
     m.box.style.opacity = '1';
     m.visibleStatus = true;
-    m.fire('show');
+    m.publish('show');
 
     return m;
 };

@@ -57,7 +57,7 @@ SubscribeModel.prototype.unSubscribe = function(even,func){
  * @param  {[string]} even [广播的事件]
  * @return {[type]}      [description]
  */
-SubscribeModel.prototype.fire = function(even){
+SubscribeModel.prototype.publish = function(even){
     var m = this,i=0,len,o;
 
     o = m[even];

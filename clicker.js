@@ -3,7 +3,7 @@
  * @type {Object}
  */
 'use strict';
-var Clicker = new SubscribeModel;
+var Clicker = new PublishSubscribePattern;
 
 Clicker.init = function(container,id){
     var m = this;

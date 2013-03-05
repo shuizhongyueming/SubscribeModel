@@ -2,7 +2,7 @@
 * 订阅者模式 继承类
 * 占用名称 SubscribeModel
 *************************************************************/
-function SubscribeModel(){};    
+function PublishSubscribePattern (){};    
 
 /**
  * [subscribe 订阅]

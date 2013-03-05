@@ -3,7 +3,7 @@
  * @type {Object}
  */
 'use strict';
-var Changer = new SubscribeModel;
+var Changer = new PublishSubscribePattern;
 
 /**
  * [init 初始化]

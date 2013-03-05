@@ -3,7 +3,7 @@
  * @type {Object}
  */
 'use strict';
-var Hider = new SubscribeModel;
+var Hider = new PublishSubscribePattern;
 
 Hider.init = function(container,id){
     var m = this;

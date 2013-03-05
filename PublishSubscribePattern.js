@@ -1,6 +1,6 @@
 /************************************************************
 * 订阅者模式 继承类
-* 占用名称 SubscribeModel
+* 占用名称 PublishSubscribePattern
 *************************************************************/
 function PublishSubscribePattern (){};    
 
@@ -10,7 +10,7 @@ function PublishSubscribePattern (){};
  * @param  {[function]} func [订阅者收到订阅的消息之后的动作]
  * @return {[number]}        [0->成功 1->even格式错误 2->func格式错误]
  */
-SubscribeModel.prototype.subscribe = function(even,func){
+PublishSubscribePattern.prototype.subscribe = function(even,func){
     var m = this;
 
     // 参数检测
@@ -32,7 +32,7 @@ SubscribeModel.prototype.subscribe = function(even,func){
  * @param  {[function]} func [订阅者收到订阅的消息之后，取消的动作]
  * @return {[number]}        [0->成功 1->even格式错误 2->func格式错误 3->要取消的动作不存在]
  */
-SubscribeModel.prototype.unSubscribe = function(even,func){
+PublishSubscribePattern.prototype.unSubscribe = function(even,func){
     var m = this,o,i,len;
 
     // 参数检测
@@ -57,7 +57,7 @@ SubscribeModel.prototype.unSubscribe = function(even,func){
  * @param  {[string]} even [广播的事件]
  * @return {[type]}      [description]
  */
-SubscribeModel.prototype.publish = function(even){
+PublishSubscribePattern.prototype.publish = function(even){
     var m = this,i=0,len,o;
 
     o = m[even];

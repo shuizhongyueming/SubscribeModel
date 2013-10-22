@@ -52,3 +52,4 @@ SubscribeModel.unSubscribe('ajax-back',callback);
 
 本人系js新手，急需指点，欢迎指出不足之处或者可以得到肯定之处
 联系方式 [水中月明](mailto: shuizhongyueming@gmail.com@gmail.com)
+[个人网站](http://www.shuizhongyueming.com/)

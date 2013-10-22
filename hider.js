@@ -3,7 +3,7 @@
  * @type {Object}
  */
 'use strict';
-var Hider = new PublishSubscribePattern;
+var Hider = {};
 
 Hider.init = function(container,id){
     var m = this;
@@ -22,7 +22,7 @@ Hider.hideBox = function(){
 
     m.box.style.opacity = '0';
     m.visibleStatus = false;
-    m.publish('hide');
+    SubscribeModel.fire('hide');
     return m;
 };
 
@@ -35,7 +35,7 @@ Hider.showBox = function(){
 
     m.box.style.opacity = '1';
     m.visibleStatus = true;
-    m.publish('show');
+    SubscribeModel.fire('show');
 
     return m;
 };

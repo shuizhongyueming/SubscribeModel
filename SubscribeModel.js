@@ -100,7 +100,7 @@ SubscribeModel.unSubscribe = function(even,func){
         
         // 在没有指定命名空间，且回调函数为空的时候，是清空所有的事件监听
         if(typeof func === 'undefined'){
-            o = [];
+            m.event[eventType] = undefined;
             return 3;
         }
 
@@ -158,7 +158,8 @@ SubscribeModel.fire = function(even,data){
         for(i=0,len=o.length;i<len;i++){
             // 遇到以命名空间存储的数据结构
             if(o[i] instanceof Array && o[i][1] === func){
-                o[i][1](data);
+                // 把even放在data后面，这样even对于回调函数来说就是可选的
+                o[i][1](data,even);
                 continue;
             }
             o[i](data);

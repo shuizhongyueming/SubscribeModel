@@ -3,7 +3,7 @@
  * @type {Object}
  */
 'use strict';
-var Changer = new PublishSubscribePattern;
+var Changer = {};
 
 /**
  * [init 初始化]
@@ -42,7 +42,7 @@ Changer.changeBg = function(color){
     var m = this;
 
     m.box.style.backgroundColor = color;
-    m.publish(color);
+    SubscribeModel.fire(color);
 
     return m;
 

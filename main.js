@@ -6,27 +6,27 @@ function main(){
         
     // Clicker广播click Hider 切换隐藏与显示
     function toggleHider(){Hider.toggleBox();}
-    Clicker.subscribe('click',toggleHider);
+    SubscribeModel.subscribe('click',toggleHider);
 
     // Hider广播hide Clicker显示文本
-    Hider.subscribe('hide',function(){Clicker.changeCont('Hider隐藏了');});
+    SubscribeModel.subscribe('hide',function(){Clicker.changeCont('Hider隐藏了');});
 
     // Hider广播show Clicker显示文本
-    Hider.subscribe('show',function(){Clicker.changeCont('Hider显示了');});
+    SubscribeModel.subscribe('show',function(){Clicker.changeCont('Hider显示了');});
 
     // Changer广播green Clicker显示文本 Hider比如隐藏
-    Changer.subscribe('green',function(){
+    SubscribeModel.subscribe('green',function(){
         Hider.hideBox();
         Clicker.changeCont('Hider 讨厌绿色 隐身了');
     });
 
     // Changer广播red Hider必然显示
-    Changer.subscribe('red',function(){
+    SubscribeModel.subscribe('red',function(){
         if(!Hider.visibleStatus) Hider.showBox();
     });
 
     // Clicker广播click Changer 切换背景固定与改变两种状态
-    Clicker.subscribe('click',function(){Changer.toggle();});
+    SubscribeModel.subscribe('click',function(){Changer.toggle();});
 
     document.getElementById('stop').addEventListener('click',function(){
         Clicker.unSubscribe('click',toggleHider);

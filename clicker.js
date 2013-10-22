@@ -3,7 +3,7 @@
  * @type {Object}
  */
 'use strict';
-var Clicker = new PublishSubscribePattern;
+var Clicker = {};
 
 Clicker.init = function(container,id){
     var m = this;
@@ -11,7 +11,7 @@ Clicker.init = function(container,id){
     new Boxer(container,id,"I'm Clicker","<p>你可以点击我</p><h1></h1>");
     m.box = document.getElementById(id);
     m.box.addEventListener('click',function(){
-        m.publish('click');
+        SubscribeModel.fire('click');
     },false);
 
 };
